@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- ページの文字エンコードを指定 -->
+    <meta charset="UTF-8">
+    <!-- レスポンシブデザインのためのビューポート設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル（app.jsから渡されるtitle変数を使用） -->
+    <title><%= title %></title>
+    <!-- 簡単なスタイリングを追加 -->
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 24px;
+            color: #e74c3c;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        .description {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .navigation {
+            margin-top: 40px;
+        }
+        .nav-link {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: #2980b9;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            color: #95a5a6;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- メインコンテンツのコンテナ -->
+    <div class="container">
+        <!-- ページタイトル（app.jsのtitle変数から取得） -->
+        <h1><%= title %></h1>
+        
+        <!-- メインメッセージ（app.jsのmessage変数から取得） -->
+        <div class="message"><%= message %></div>
+        
+        <!-- 説明文（app.jsのdescription変数から取得） -->
+        <p class="description"><%= description %></p>
+        
+        <!-- ナビゲーションリンク -->
+        <div class="navigation">
+            <h3>他のページも見てみよう：</h3>
+            <!-- /helloページへのリンク -->
+            <a href="/hello" class="nav-link">こんにちはページ</a>
+            <!-- /goodnightページへのリンク -->
+            <a href="/goodnight" class="nav-link">おやすみページ</a>
+        </div>
+        
+        <!-- フッター情報 -->
+        <div class="footer">
+            <p>このアプリケーションはExpress.jsを使って作られています。</p>
+            <p>初心者向けのサンプルコードです。</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    このファイルについて：
+    - EJS（Embedded JavaScript）テンプレートファイルです
+    - <%= variable %> の形式でJavaScriptの変数を埋め込むことができます
+    - app.jsのres.render()で渡されたデータを表示しています
+    - HTMLとCSSを組み合わせて見た目を整えています
+-->

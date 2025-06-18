@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- ページの文字エンコードを指定 -->
+    <meta charset="UTF-8">
+    <!-- レスポンシブデザインのためのビューポート設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル（app.jsから渡されるtitle変数を使用） -->
+    <title><%= title %></title>
+    <!-- スタイリング -->
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #e8f5e8;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 5px solid #27ae60;
+        }
+        h1 {
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 32px;
+            color: #27ae60;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        .description {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .navigation {
+            margin-top: 40px;
+        }
+        .nav-link {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 12px 24px;
+            background-color: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: #2ecc71;
+        }
+        .home-link {
+            background-color: #95a5a6;
+        }
+        .home-link:hover {
+            background-color: #7f8c8d;
+        }
+        .emoji {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- メインコンテンツのコンテナ -->
+    <div class="container">
+        <!-- ページタイトル -->
+        <h1><%= title %></h1>
+        
+        <!-- 挨拶の絵文字 -->
+        <div class="emoji">👋</div>
+        
+        <!-- メインメッセージ -->
+        <div class="message"><%= message %></div>
+        
+        <!-- 説明文 -->
+        <p class="description"><%= description %></p>
+        
+        <!-- 追加情報 -->
+        <p class="description">
+            ここは挨拶のページです。<br>
+            日本語で「こんにちは」は一日中使える便利な挨拶ですね！
+        </p>
+        
+        <!-- ナビゲーションリンク -->
+        <div class="navigation">
+            <h3>他のページへ移動：</h3>
+            <!-- ホームページへ戻るリンク -->
+            <a href="/" class="nav-link home-link">ホームに戻る</a>
+            <!-- おやすみページへのリンク -->
+            <a href="/goodnight" class="nav-link">おやすみページ</a>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    このファイルについて：
+    - 「こんにちは」専用のページテンプレートです
+    - 緑色をテーマカラーにして親しみやすいデザインにしています
+    - 絵文字を使って視覚的にも分かりやすくしています
+    - 他のページへのナビゲーションリンクも含んでいます
+-->
